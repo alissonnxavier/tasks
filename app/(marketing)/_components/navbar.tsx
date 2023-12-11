@@ -8,6 +8,8 @@ import { useConvexAuth } from "convex/react";
 import { Button } from "@/components/ui/button";
 import { SignInButton, UserButton } from "@clerk/clerk-react";
 import Link from "next/link";
+import { Spinner } from "@/components/spinner";
+
 
 const Navbar = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
@@ -21,7 +23,7 @@ const Navbar = () => {
       <Logo />
       <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
         {isLoading && (
-          'spiner here'
+          <Spinner/>
         )}
         {!isAuthenticated && !isLoading && (
           <>
