@@ -13,6 +13,7 @@ import { useParams, usePathname, useRouter } from "next/navigation";
 import { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { cn } from "@/lib/utils";
+import { UserItem } from "./user-iten";
 
 
 
@@ -125,8 +126,10 @@ const Navigation = () => {
                 >
                     <ChevronsLeft className="h-6 w-6" />
                 </div>
-                
-               
+                <div>
+                    <UserItem />
+                </div>
+
                 <div
                     onMouseDown={handleMouseDown}
                     onClick={resetWidth}
@@ -141,7 +144,7 @@ const Navigation = () => {
                     isMobile && "left-0 w-full"
                 )}
             >
-               
+
             </div>
         </>
     )
