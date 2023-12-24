@@ -31,7 +31,7 @@ export const Cover = ({
         if (url) {
             await edgestore.publicFiles.delete({
                 url: url
-            })
+            });
         }
         removeCoverImage({
             id: params.documentId as Id<"documents">
